@@ -1,0 +1,110 @@
+/**
+ * Centralized design tokens — Material 3 inspired, healthcare-oriented.
+ * Components must reference these custom properties rather than hardcoding
+ * colors/spacing/radius/elevation, so the clinic's branding can change here
+ * without touching component code.
+ */
+
+:root {
+  /* ---- Brand color ---- */
+  --clinic-primary-hue: 182deg; /* deep teal */
+  --color-primary: #0f6b66;
+  --color-primary-dark: #0a4f4b;
+  --color-primary-light: #e3f2f1;
+  --color-on-primary: #ffffff;
+
+  --color-secondary: #3d6b8a; /* muted blue */
+  --color-secondary-light: #e6eef4;
+  --color-on-secondary: #ffffff;
+
+  /* ---- Surfaces ---- */
+  --color-background: #f4f6f7;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef2f2;
+  --color-surface-hover: #eaf1f0;
+  --color-outline: #d6dedd;
+  --color-outline-strong: #b7c3c2;
+
+  /* ---- Text ---- */
+  --color-text: #1a2422;
+  --color-text-muted: #55635f;
+  --color-text-subtle: #7c8985;
+  --color-text-on-primary: #ffffff;
+  --color-link: #0f6b66;
+
+  /* ---- Status ---- */
+  --color-success: #1c7a4d;
+  --color-success-bg: #e4f5eb;
+  --color-warning: #9a6400;
+  --color-warning-bg: #fdf2df;
+  --color-error: #ba1a1a;
+  --color-error-bg: #fdecec;
+  --color-info: #3d6b8a;
+  --color-info-bg: #e6eef4;
+
+  /* ---- Bill status ---- */
+  --status-unpaid: #ba1a1a;
+  --status-unpaid-bg: #fdecec;
+  --status-partial: #9a6400;
+  --status-partial-bg: #fdf2df;
+  --status-paid: #1c7a4d;
+  --status-paid-bg: #e4f5eb;
+  --status-cancelled: #5c6764;
+  --status-cancelled-bg: #eceeed;
+
+  /* ---- Typography ---- */
+  --font-sans: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.25rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* ---- Elevation (restrained Material 3 shadows) ---- */
+  --elevation-1: 0 1px 2px rgba(15, 23, 21, 0.06), 0 1px 1px rgba(15, 23, 21, 0.04);
+  --elevation-2: 0 2px 6px rgba(15, 23, 21, 0.08), 0 1px 2px rgba(15, 23, 21, 0.05);
+  --elevation-3: 0 8px 24px rgba(15, 23, 21, 0.14), 0 2px 6px rgba(15, 23, 21, 0.08);
+
+  /* ---- Motion ---- */
+  --motion-fast: 120ms;
+  --motion-normal: 180ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ---- Layout ---- */
+  --sidebar-width: 248px;
+  --sidebar-width-collapsed: 72px;
+  --topbar-height: 64px;
+  --content-max-width: 1280px;
+
+  --focus-ring: 0 0 0 3px rgba(15, 107, 102, 0.35);
+}
