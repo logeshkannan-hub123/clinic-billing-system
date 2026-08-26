@@ -8,11 +8,7 @@
 // cookie set by Render is stored as a normal first-party, same-site cookie
 // — no SameSite=None / third-party-cookie problems.
 
-import dotenv from "dotenv";
-dotenv.config();
-
-const BACKEND_ORIGIN = process.env.BACKEND_ORIGIN;
-
+const BACKEND_ORIGIN = 'https://clinic-billing-system.onrender.com'
 export const config = {
   api: {
     bodyParser: false, // pass the raw request body straight through untouched
