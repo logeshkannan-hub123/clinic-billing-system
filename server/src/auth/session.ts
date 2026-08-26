@@ -19,8 +19,14 @@ export function createSessionMiddleware(store?: Store) {
     store: store ?? new MemoryStore(),
     cookie: {
       httpOnly: true,
+      // Frontend (Vercel) and backend (Render) are different domains, so
+      // this is a cross-site request, not just cross-origin. A "lax" cookie
+      // is never sent back on cross-site fetch/XHR calls (only on top-level
+      // navigations), which breaks login persistence. "none" is required
+      // for the cookie to be sent on cross-site API calls, and browsers
+      // mandate `secure: true` whenever `sameSite: "none"` is used.
       secure: env.nodeEnv === "production",
-      sameSite: "lax",
+      sameSite: env.nodeEnv === "production" ? "none" : "lax",
       maxAge: SESSION_MAX_AGE_MS,
     },
   };
