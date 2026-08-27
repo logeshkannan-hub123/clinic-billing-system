@@ -2,3 +2,7 @@ node_modules/
 dist/
 .env
 *.local
+
+# Portfolio/marketing assets — generated on demand, not part of the app.
+/screenshots/
+/videos/

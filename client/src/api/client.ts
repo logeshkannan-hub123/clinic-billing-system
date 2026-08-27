@@ -1,11 +1,3 @@
-// In production the frontend (Vercel) and backend (Render) are on different
-// domains, so a relative "/api" path would resolve to the frontend's own
-// origin and 404/405. VITE_API_URL must be set in Vercel's env vars to the
-// Render backend's URL, e.g. https://clinic-billing-system.onrender.com/api.
-// Falls back to "/api" for local dev, where Vite's dev server proxy (or a
-// same-origin setup) can still handle it.
-const API_BASE_URL = import.meta.env.VITE_API_URL ?? '/api'
-
 export class ApiError extends Error {
   status: number
   body: unknown
@@ -46,7 +38,7 @@ export function setUnauthorizedHandler(handler: (() => void) | null): void {
 }
 
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const response = await fetch(`${API_BASE_URL}${path}`, {
+  const response = await fetch(`/api${path}`, {
     ...init,
     credentials: 'include',
     headers: {
